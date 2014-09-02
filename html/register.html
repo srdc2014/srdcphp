@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>内容页</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="./css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="./css/main.css">
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="./js/unslider.js"></script>
+<script src="./js/index.js"></script>
+<script src="./js/jquery.lazyload.js"></script>
+</head>
+<body>
+
+<div class="wraper">
+	<div id="top-line"></div>
+	<div class="head">
+		<div class="top">
+			<div class="logo"><a href=""><img src="./images/logo.png" alt="srdccms"></a></div>
+			<div id="tagline"><a href="">尚睿德创，值得选择!</a></div>
+		</div>
+		<div class="topr">
+			<div class="contact-details">Phone: 1551007897</div>
+			<div class="search">
+				<form method="get" action="">
+					<button class="search-btn"></button>
+					<input type="text" value="Search" onfocus="if(this.value=='Search')this.value='';" onblur="if(this.value=='')this.value='Search';" class="search-field">
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<div class="left-corner"></div>
+		<div class="right-corner"></div>
+		<ul class="menu">
+			<li><a class="on" href="">网站首页</a></li>
+			<li>
+				<a href="">关于我们</a>
+				<ul class="sub-nav">
+					<li><a href="">公司简介</a></li>
+					<li><a href="">公司环境</a></li>
+					<li><a href="">团队成员</a></li>
+				</ul>				
+			</li>
+			<li>
+				<a href="">服务项目</a>
+				<ul class="sub-nav">
+					<li><a href="">网站建设</a></li>
+					<li><a href="">虚拟主机</a></li>
+					<li><a href="">企业邮箱</a></li>
+					<li><a href="">模板建站</a></li>
+				</ul>
+			</li>
+			<li><a href="">案例展示</a></li>
+			<li>
+				<a href="">新闻中心</a>
+				<ul class="sub-nav">
+					<li><a href="">公告通知</a></li>				
+					<li><a href="">最新动态</a></li>
+					<li><a href="">行业资讯</a></li>
+				</ul>
+			</li>
+			<li><a href="">文档下载</a></li>
+			<li><a href="">招贤纳士</a></li>
+			<li><a href="">在线留言</a></li>
+		</ul>
+	</div>
+
+	
+	<!-- 中间内容 -->
+	<div class="boxwrap">
+	  <div class="main_box">
+	    <h1 class="main_tit">
+	      会员注册<strong>Register</strong>
+	    </h1>
+
+	    <div class="reg-box">
+	      <div class="reg-top">
+	        <ul class="step">
+	          <li class="step1"><em>1</em>填写会员信息</li>
+	          
+	          <li class="step3"><em>2</em>注册成功</li>
+	          
+	        </ul>
+	      </div>
+	      
+	      <div class="reg-con">
+	        <!--用户注册-->
+	        <link rel="stylesheet" href="/css/validate.css" />
+			<script type="text/javascript" src="/scripts/jquery/jquery.form.min.js"></script>
+	        <script type="text/javascript" src="/scripts/jquery/Validform_v5.3.2_min.js"></script>
+	        <script type="text/javascript" src="/templates/green/js/register_validate.js"></script>
+	        <form id="regform" name="regform" url="/tools/submit_ajax.ashx?action=user_register">
+	          
+	          <dl>
+	            <dt><em>*</em>用户名：</dt>
+	            <dd>
+	              <input id="txtUserName" name="txtUserName" class="input wide" type="text" datatype="s3-50" nullmsg="请输入用户名" sucmsg=" " ajaxurl="/tools/submit_ajax.ashx?action=validate_username" />
+	              <span class="Validform_checktip"></span>
+	              <i>（5-20位字母、数字或下划线组合，首字符必须为字母。）</i>
+	            </dd>
+	          </dl>
+	          <dl>
+	            <dt><em>*</em>密码：</dt>
+	            <dd>
+	              <input id="txtPassword" name="txtPassword" class="input wide" type="password" datatype="*6-20" nullmsg="请输入密码" errormsg="密码范围在6-20位之间" sucmsg=" " />
+	              <span class="Validform_checktip"></span>
+	              <i>（为了您的帐户安全，强烈建议您的密码使用字符+数字等多种不同类型的组合，并且密码长度大于6位。）</i>
+	            </dd>
+	          </dl>
+	          <dl>
+	            <dt><em>*</em>确认密码：</dt>
+	            <dd>
+	              <input id="txtPassword1" name="txtPassword1" class="input wide" type="password" datatype="*" recheck="txtPassword" nullmsg="请再输入一次密码" errormsg="两次输入的密码不一致" sucmsg=" " />
+	              <span class="Validform_checktip"></span>
+	              <i>（确保密码输入正确。）</i>
+	            </dd>
+	          </dl>
+	          <dl>
+	            <dt><em>*</em>手机号码：</dt>
+	            <dd>
+	              <input id="txtMobile" name="txtMobile" class="input wide" type="text" datatype="m" nullmsg="请再输入手机号码" sucmsg=" " />
+	              <span class="Validform_checktip"></span>
+	              <i>（填写正确的手机号码，忘记密码时可以通过短信找回！）</i>
+	            </dd>
+	          </dl>
+	          <dl>
+	            <dt><em>*</em>Email：</dt>
+	            <dd>
+	              <input id="txtEmail" name="txtEmail" class="input wide" type="text" datatype="e" nullmsg="请再输入邮箱地址" sucmsg=" " />
+	              <span class="Validform_checktip"></span>
+	              <i>（填写正确的邮箱地址，忘记密码时可以通过邮箱找回！）</i>
+	            </dd>
+	          </dl>
+	          <dl>
+	            <dt><em>*</em>验证码：</dt>
+	            <dd>
+	              
+	              <input id="txtCode" name="txtCode" class="input small" type="text" datatype="s4-20" style="ime-mode:disabled;text-transform:uppercase;">
+	              <a id="verifyCode" style="display:none;" href="javascript:;" onclick="ToggleCode(this, '/tools/verify_code.ashx');return false;"><img src="/tools/verify_code.ashx" width="80" height="22" /> 看不清楚？</a>
+	              <span class="Validform_checktip"></span>
+	              <i>（单击显示验证码，不区别大小写！）</i>
+	              
+	            </dd>
+	          </dl>
+	          
+	          <dl>
+	            <dt><em>*</em>注册条款：</dt>
+	            <dd>
+	              <input id="chkAgree" type="checkbox" value="1" name="chkAgree">
+	              <label for="chkAgree">我已仔细阅读并接受<a href="javascript:;" onclick="showWindow('regrules');">注册许可协议</a>。</label>
+	              <div id="regrules" title="注册许可协议" style="display:none;">1、在本站注册的会员，必须遵守《互联网电子公告服务管理规定》，不得在本站发表诽谤他人，侵犯他人隐私，侵犯他人知识产权，传播病毒，政治言论，商业讯息等信息。<br/>
+	2、在所有在本站发表的文章，本站都具有最终编辑权，并且保留用于印刷或向第三方发表的权利，如果你的资料不齐全，我们将有权不作任何通知使用你在本站发布的作品。
+	3、在登记过程中，您将选择注册名和密码。注册名的选择应遵守法律法规及社会公德。您必须对您的密码保密，您将对您注册名和密码下发生的所有活动承担责任。</div>
+	            </dd>
+	          </dl>
+	          
+	          <dl>
+	            <dt></dt>
+	            <dd>
+	              
+	              <input id="btnSubmit" name="btnSubmit" type="submit" class="btn_submit" value="注 册" disabled="disabled" />
+	              
+	            </dd>
+	          </dl>
+	        </form>
+	        <!--用户注册-->
+	      </div>
+	      
+
+	    </div>
+
+	    <div class="clear"></div>
+	  </div>
+	</div>
+	<!-- end-中间内容 -->
+
+
+	<div class="clear"></div>
+	<div class="footer">
+			<!-- 960 Container -->
+			<div class="container">
+
+				<!-- About -->
+				<div class="four columns">
+					<img alt="" src="images/logo.png" id="logo-footer">
+					<p>襄阳尚睿德创信息技术有限责任公司成立于2009年，前身是北京尚睿德创设计工作室。我们以linux系统的WEB应用、PHP+Mysql程序开发、PHP+Mysql网站建设，PHP+Mysql开源系统（dedecms,phpcms,ecshop,shopex,uchome,Discuz,Wordpress,Thinkphp,Yourphp等）二次开发为主营业务。</p>
+
+				</div>
+
+				<!-- Contact Details -->
+				<div class="four columns" style="padding-top:7px;">
+					<h4>联系我们</h4>
+					<ul class="contact-details-alt">
+						<li><!-- <i class="halflings white map-marker"></i> --> <p><strong>地址：</strong> 襄阳市人民广场颐高数码8楼302</p></li>
+						<li><!-- <i class="halflings white user"></i> --> <p><strong>手机：</strong> 15510078897</p></li>
+						<li><!-- <i class="halflings white envelope"></i> --> <p><strong>Email：</strong> <a href="#">srdc2012@163.com</a></p></li>
+						<li><p><strong>QQ：</strong> 15541106</p></li>
+						<li><p><strong>网址：</strong> <a href="#">www.xyphp.com</a></p></li>
+						<li><p><strong>网址：</strong> <a href="#">www.xyphp.net</a></p></li>
+					</ul>
+				</div>
+
+				<!-- Photo Stream -->
+				<div class="four columns" style="padding-top:7px;">
+					<h4>友情链接</h4>
+					<div class="flickr-widget">
+						<div class="clearfix">
+							<a href="www.xyphp.com">襄阳php网站建设</a>
+							<a href="www.xyphp.com">尚睿德创</a>
+							<a href="www.xyphp.com">襄阳爱车网</a>
+							<a href="www.xyphp.com">襄阳爱尚菜</a>
+							<a href="www.xyphp.com">襄阳网站设计</a>
+							<a href="www.xyphp.com">襄阳模板建站</a>
+							<a href="www.xyphp.com">襄阳php开发</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Twitter -->
+				<div class="four columns" style="padding-top:7px;">
+					<h4>微博微信</h4>
+					<ul id="twitter">
+						<li><span>微信： <a href="">xyphp_com</a></span></li>
+						<li><span>腾讯微博： <a href="">尚睿德创</a></span></li>
+						<li><span>新浪微博： <a href="">尚睿德创</a></span></li>
+						<li><span>网易微博： <a href="">尚睿德创</a></span></li>
+						<li><span>新浪博客： <a href="">尚睿德创</a></span></li>
+					</ul>
+					<div class="clearfix"></div>
+				</div>
+
+			</div>
+			<!-- 960 Container / End -->
+			<div class="clear"></div>
+	</div>
+
+	<div class="footer-bottom">
+
+		<!-- 960 Container -->
+		<div class="container">
+
+			<!-- Copyrights -->
+			<div class="eight columns">
+				<div class="copyright">
+					&copy; Copyright 2009-2014 by <a href="#">尚睿德创</a>. All Rights Reserved.
+				</div>
+			</div>
+
+			<!-- Menu -->
+			<div class="eight columns">
+				<nav id="sub-menu">
+					<ul>
+						<li><a href="#">网站首页</a></li>
+						<li><a href="#">网站地图</a></li>
+						<li><a href="#">联系我们</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<!-- 960 Container / End -->
+
+	</div>
+
+	<div class="clear"></div>
+</div>
+
+<script>
+$(function() {
+    $('.slider').unslider({
+    	speed: 600,
+    	fluid: true,
+		dots: true
+    });
+
+    $(".lazyload").lazyload({effect:"fadeIn"});
+});
+
+
+$(document).ready(function () {
+  $('.picture a').hover(function () {
+	$(this).find('.image-overlay-zoom, .image-overlay-link').stop().fadeTo('fast', 1);
+  },function () {
+	$(this).find('.image-overlay-zoom, .image-overlay-link').stop().fadeTo('fast', 0);
+  });
+});
+</script>
+    
+</body>
+</html>
