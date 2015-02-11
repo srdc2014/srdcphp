@@ -1,0 +1,30 @@
+<div class="clearfix fr w742">
+	<div class="widget">
+	  <div class="widget-content">
+	      <div class="contmain">
+	      	<ul class="Articlelist">
+				<volist name="list" id="r">
+				<li>
+					<div class="hostbox">
+						<h3>{$r.title}</h3>
+						<div class="hostcont">
+							<p>{$r.hprice} 元</p>
+							<p>{$r.hsn}</p>
+							<p>{$r.hcapacity}</p>
+							<p>{$r.hdatatype}：{$r.hdatadx}</p>
+							<p>{$r.hother}</p>
+							<div align="center" class="hostbuy">
+								<a target="_blank" href="{$r.url}">查看详细</a>
+								<a target="_blank" href="http://www.xyphp.net/user/default.asp">免费试用</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				</volist>
+			</ul>
+	      </div>
+	      <div class="pages"><table align="center" style="margin:0 auto;"><tr><td>{$pages}</td></tr></table></div>
+	      <div class="clear"></div>
+	  </div>
+	</div>
+</div>

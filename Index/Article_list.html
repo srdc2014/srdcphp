@@ -1,0 +1,15 @@
+     <div class="clearfix fr w742">
+       <div class="widget">
+          <div class="widget-content">
+              <div class="contmain">
+              	<ul class="Articlelist">
+			<volist name="list" id="r">
+			<li><span class="date">{$r.createtime|toDate=###,'Y-m-d'}</span><a href="{$r.url}" target="_blank">{$r.title}</a></li>
+			</volist>
+              	</ul>
+              </div>
+              <div class="pages"><table style="margin:0 auto;"><tr><td>{$pages}</td></tr></table></div>
+              <div class="clear"></div>
+          </div>
+      </div>
+     </div>

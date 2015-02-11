@@ -1,0 +1,59 @@
+ <include file="Home:header"/>
+{__NOLAYOUT__}
+<load href="__PUBLIC__/Js/jquery.validate.js"/>
+
+  <!-- star-main  -->
+   <div class="main">
+      <h2 id="<?php $id = intval($_GET['id']);echo $id;?>"><img alt="襄阳尚睿德创-http://www.xyphp.com" src="/Static/images/caseshow.jpg"></h2>
+      <div class="bread">{:L(catpos)} <a href="{:URL()}">{:L(home_font)}</a> - <YP:catpos  catid="catid" space=" - " /></div>
+
+      <div class="clearfix w1000">
+       <div class="widget">
+          <div class="widget-content">
+<!-- star留言块开始 -->
+            <div class="guestwrap">
+                <!-- <div class="guestlist"></div>
+                <div class="pages"></div> -->
+
+                <div class="guestform" style="width:900px;">
+                  <form name="myform" id="myform" action="{:URL('User-Post/insert')}" method="post">
+                    <input type="hidden"  name="catid" value="{$catid}" />
+                    <input type="hidden"  name="moduleid" value="{$moduleid}" />
+                    <input type="hidden"  name="lang" value="{$langid}" />
+                  <table id="liuyan"> 
+                  <tbody>
+<tr><td>&nbsp;</td><td style="font-size:14px; color:red;">注：带 * 号为必填项。</td></tr>
+                    <volist name="fields" id="r">
+                    <if condition="!empty($r['status']) && $r['ispost']">
+                      <tr>
+                        <td align="right" class="text">{if  $r['required']}<font color="red">* </font>{/if} {if  APP_LANG}{:L($r[field])}{else}{$r.name}{/if}</td>
+                        <td id="box_{$r['field']}">
+                        {$r|getform=$form,###}
+                        </td>
+                      </tr>
+                    </if>
+                    </volist>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td clospan="2"><input type="submit"  value="{:L(dosubmit)}" class="btn">&nbsp;<input type="reset"   value="{:L(cancel)}" class="btn"></td>
+                    </tr>
+                  </tbody>
+                </table>
+                </form>
+                </div>
+
+            </div>
+<!-- end留言块结束 -->
+              </div>
+              <div class="clear"></div>
+          </div>
+      </div>
+     </div>
+
+     <div class="clear"></div>
+</div>
+   <!-- end-main  -->
+
+</div>
+<!-- end-wraper -->
+<include file="Home:footer"/>

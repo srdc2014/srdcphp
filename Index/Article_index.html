@@ -1,0 +1,21 @@
+     <div class="clearfix fr w742">
+       <div class="widget">
+          <div class="widget-content">
+              <div class="contmain">
+
+                <YP:subcat catid="catid" id="cid" key="ii">
+                <div class="artli">
+                  <h4 class="tit"><span><a href="{$cid['url']}">+{:L(more)}</a></span> <b><a href="{$cid['url']}">{$cid['catname']}</a></b></h4>
+                  <ul class="Articlelist">
+                    <YP:list name="Article" order="id desc" catid="$cid[arrchildid]" limit="5">
+                        <li><span class="date">{$r.createtime|toDate=###,'Y-m-d'}</span><a href="{$r.url}" target="_blank">{$r.title}</a></li>
+                    </YP:list> 
+                  </ul>
+                </div>
+                </YP:subcat>
+
+              </div>
+              <div class="clear"></div>
+          </div>
+      </div>
+     </div>

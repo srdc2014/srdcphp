@@ -1,4 +1,4 @@
 srdcphp
 =======
 
-http://git.oschina.net/houdunwang/hdcms.git
+https://github.com/srdc2014/srdcphp.git

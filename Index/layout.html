@@ -1,0 +1,56 @@
+<include file="Home:header"/>
+   <!-- star-main  -->
+   <div class="main">
+    <h2><img alt="襄阳尚睿德创-http://www.xyphp.com" src="{$Categorys[$catid]['bannerurl']}"></h2>
+    <div class="bread">{:L(catpos)} <a href="{:URL()}">{:L(home_font)}</a> - <YP:catpos  catid="catid" space=" - " /></div>
+    <div class="clear"></div>
+    <!-- star左侧 -->
+         <div class="w240 fl clearfix">
+       
+      <div class="widget w240">
+          <div class="widget-top">
+            <h4><a href="{$Categorys[$catid="$bcid"]['url']}" class="green">{$Categorys[$catid]['catname']}</a></h4>
+            <div class="stripe-line"></div>
+          </div>
+          <div class="widget-content">
+            <ul class="subsnav">
+                <YP:subcat catid="$bcid">
+                  <li><a{if $r[id]==$cid} class="active"{/if} href="{$r.url}">{$r.catname}</a></li>
+                </YP:subcat>
+            </ul>
+          </div>
+      </div>
+
+      <div class="widget w240">
+          <div class="widget-top"><h4><a href="{$Categorys[16]['url']}" class="green">常见问题</a></h4><div class="stripe-line"></div></div>
+          <div class="widget-content">
+            <YP:list order="id desc" catid="16" limit="10" name="Article">
+             <p><a href="{$r.url}" title="{$r.title}">{$r.title|str_cut=###,32}</a></p>
+            </YP:list>
+          </div>
+      </div>
+
+      <div class="widget w240">
+          <div class="widget-top"><h4><a href="{$Categorys[12]['url']}" class="green">联系我们</a></h4><div class="stripe-line"></div></div>
+          <div class="widget-content">
+            <yp:block pos="contact" />
+          </div>
+      </div>
+<div class="widget w240">
+<script type='text/javascript' src='http://js.adm.cnzz.net/s.php?sid=215396'></script>
+</div>
+     </div>
+     <!-- end左侧 -->
+
+
+      {__CONTENT__}
+
+
+  <div class="clear"></div>
+  </div>
+   <!-- end-main  -->
+
+</div>
+<!-- end-wraper -->
+
+<include file="Home:footer"/>
